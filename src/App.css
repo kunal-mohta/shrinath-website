@@ -1,0 +1,101 @@
+#desktop-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 62vw;
+  height: 14vh;
+  font-size: 2rem; }
+
+@media all and (max-width: 600px) {
+  #desktop-nav {
+    display: none; } }
+
+#homepage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background: url("./resources/home-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#logo-wrap {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#company-logo {
+  height: 25vh; }
+
+@media all and (max-width: 600px) {
+  #homepage {
+    background: url("./resources/home-mobile-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #company-logo {
+    width: 90vw; }
+  #nav-toggle-circle {
+    position: absolute;
+    top: -12vh;
+    left: -12vh;
+    height: 24vh;
+    width: 24vh;
+    border-radius: 100%;
+    background: #ff7517; } }
+
+#aboutpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background: url("./resources/about-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media all and (max-width: 600px) {
+  #aboutpage {
+    background: url("./resources/home-mobile-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover; } }
+
+#productpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background: url("./resources/product-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media all and (max-width: 600px) {
+  #productpage {
+    background: url("./resources/product-mobile-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover; } }
+
+#contactpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background: url("./resources/contact-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media all and (max-width: 600px) {
+  #productpage {
+    background: url("./resources/contact-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover; } }
