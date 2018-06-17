@@ -3,17 +3,59 @@
     background: url('./resources/home-mobile-bg.svg')
     background-repeat: no-repeat
     background-size: cover
-
+  
   #company-logo
     width: 90vw
 
+  #hindi-byline
+    height: 10vh
+    padding-bottom: 20vh
+
   $nav-radius: 24vh
+  $nav-toggle-duration: 0.2s
 
   #nav-toggle-circle
+    display: block
     position: absolute
     top: -$nav-radius/2
     left: -$nav-radius/2
-    height: $nav-radius
-    width: $nav-radius
     border-radius: 100%
     background: #ff7517
+    transform-origin: 50% 50%
+    transition: transform $nav-toggle-duration linear
+    z-index: 10
+
+  .close
+    height: $nav-radius
+    width: $nav-radius
+
+  .open
+    height: $nav-radius
+    width: $nav-radius
+    transform: scale(15)
+  
+  #desktop-nav
+    display: none
+
+  #mobile-nav
+    position: absolute
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    z-index: 11
+
+  .nav-open
+    display: block !important
+
+  .nav-close
+    display: none !important
+
+  #menu-button
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: $nav-radius / 5
+    margin: 2vh 0 0 2vh
+    z-index: 20
