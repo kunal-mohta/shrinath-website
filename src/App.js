@@ -8,19 +8,7 @@ import AboutPage from './components/AboutPage';
 import ProductPage from './components/ProductPage';
 import ContactPage from './components/ContactPage';
 
-const initialState = {
-  isNavOpen: 0
-}
-
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case 'TOGGLE_NAV':
-      return (state.isNavOpen) ? { isNavOpen: 0 } : { isNavOpen: 1 };
-    
-    default:
-      return state;
-  }
-}
+import reducer from './reducer.js';
 
 const store = createStore(reducer);
 
@@ -29,10 +17,10 @@ class App extends Component {
     return (
       <div className = 'App'>
         <Provider store = { store }>
-          <HomePage />
+          {/* <HomePage /> */}
           {/* <AboutPage /> */}
           {/* <ProductPage /> */}
-          {/* <ContactPage /> */}
+          <ContactPage />
         </Provider>
       </div>
     );

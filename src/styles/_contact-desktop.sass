@@ -2,9 +2,134 @@
   position: absolute
   top: 0
   left: 0
-  z-index: -1
+  z-index: 1
   height: 100vh
   width: 100vw
   background: url('./resources/contact-bg.svg')
   background-repeat: no-repeat
   background-size: cover
+
+#contact-title
+  text-align: center
+  font-family: 'Source Sans Pro', sans-serif
+  font-size: 5.5vh
+  font-weight: 600
+  padding: 2vh 0
+
+#contact-wrapper
+  overflow-y: scroll
+  overflow-x: hidden
+  width: 100vw
+  padding-top: 2vh
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.contact
+  background: #ffffff
+  border-radius: 10px
+  box-shadow: 0 0 10px #aaaaaa
+  border: solid 1px
+
+#contact-owner
+  height: 25vh
+  width: 45%
+  margin-bottom: 4vh
+  display: flex
+  justify-content: space-between
+
+#contact-owner-tag
+  font-family: 'Roboto', sans-serif
+  font-size: 4.5vh
+  margin: 3vh 0 0 3vh
+  color: #e9290f
+
+#contact-owner-content
+  text-align: right
+  font-family: 'AvenirLight'
+  font-size: 4vh
+  margin: 5vh 8vh 0 0
+
+  img
+    width: 3.5vh
+
+.contact-sub-wrap
+  width: 100vw
+  display: flex
+  justify-content: space-around
+  margin-bottom: 4vh
+
+#contact-others
+  height: 18vh
+  width: 40%
+  display: flex
+  justify-content: space-around
+
+  div
+    font-family: 'AvenirLight'
+    font-size: 4vh
+    margin: 5vh 0 0 0
+
+    img
+      width: 3.5vh
+
+
+#contact-email
+  height: 18vh
+  width: 24%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+#contact-email-tag
+  font-family: 'Roboto', sans-serif
+  font-size: 3.5vh
+  color: #e9290f
+  text-align: center
+
+#contact-email-content
+  font-family: 'AvenirLight'
+  font-size: 3vh
+
+  img
+    width: 3.5vh
+
+#contact-office
+  height: 18vh
+  width: 24%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+#contact-office-tag
+  font-family: 'Roboto', sans-serif
+  font-size: 3.5vh
+  color: #e9290f
+  text-align: center
+
+#contact-office-content
+  font-family: 'AvenirLight'
+  font-size: 3vh
+
+  img
+    width: 2.5vh  
+
+#contact-address
+  height: 33vh
+  width: 55%
+  display: flex
+  justify-content: space-between
+
+#contact-address-tag
+  font-family: 'Roboto', sans-serif
+  font-size: 4vh
+  margin: 2.5vh 0 0 2.5vh
+  color: #e9290f
+
+#contact-address-content
+  text-align: right
+  margin: 4vh 2.5vh 0 0
+  font-size: 4vh
+  font-family: 'AvenirLight'

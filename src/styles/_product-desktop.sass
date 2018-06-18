@@ -2,9 +2,61 @@
   position: absolute
   top: 0
   left: 0
-  z-index: -1
+  z-index: 1
   height: 100vh
   width: 100vw
   background: url('./resources/product-bg.svg')
   background-repeat: no-repeat
   background-size: cover
+  display: flex
+  flex-direction: column
+  align-items: center
+
+#products-title  
+  text-align: center
+  font-family: 'Source Sans Pro', sans-serif
+  font-size: 5.5vh
+  font-weight: 600
+  padding: 2vh 0
+
+#products-wrapper
+  width: 100vw
+  height: 88vh
+  overflow-y: scroll
+  display: flex
+  justify-content: center
+
+#products
+  width: 80vw
+  display: grid
+  grid-template-rows: auto
+  grid-template-columns: repeat(auto-fill, minmax(300px, 340px))
+  grid-gap: 20px 30px
+
+.product
+  border: solid 1px black
+  height: 460px
+  border-radius: 10px
+  background: #ffffff
+  box-shadow: 0 0 10px #aaaaaa
+  display: flex
+  flex-direction: column
+
+.product-img
+  margin: 3% 4%
+  height: 75%
+  width: 92%
+  border: solid black 1px
+
+.product-info
+  margin: 2% 4%
+  height: 16%
+  width: 92%
+  font-family: 'Source Sans Pro'
+
+.product-title
+  font-weight: bold
+  font-size: 170%
+
+.product-subtitle
+  font-size: 130%

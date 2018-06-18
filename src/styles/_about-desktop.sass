@@ -2,9 +2,41 @@
   position: absolute
   top: 0
   left: 0
-  z-index: -1
+  z-index: 1
   height: 100vh
   width: 100vw
   background: url('./resources/about-bg.svg')
   background-repeat: no-repeat
   background-size: cover
+
+#about-container
+  position: absolute
+  width: 80vw
+  height: 100vh
+  right: 0
+  overflow: auto
+
+#about-title
+  text-align: center
+  font-family: 'Source Sans Pro', sans-serif
+  font-size: 5.5vh
+  font-weight: 600
+  padding: 2vh 0
+
+#about-list
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 2vh
+
+.about-list-items
+  border: solid 1px
+  width: 80%
+  font-family: 'AvenirLight', sans-serif
+  font-size: 3vh
+  padding: 3vh
+  box-sizing: border-box
+  margin-bottom: 4vh
+  border-radius: 1vh
+  box-shadow: 0 0 20px #aaaaaa
+  background: #ffffff

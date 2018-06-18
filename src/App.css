@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("./fonts/ProximaNovaRegular_0.ttf"); }
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url("./fonts/AvenirNextLTPro-Regular.otf"); }
+
 html, body {
   position: relative;
   top: 0;
@@ -6,6 +14,9 @@ html, body {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
+
+::-webkit-scrollbar {
+  visibility: hidden; }
 
 #homepage {
   position: absolute;
@@ -30,6 +41,7 @@ html, body {
   font-size: 1.5rem;
   font-family: 'Montserrat';
   font-weight: 600;
+  text-transform: uppercase;
   color: #ff6006; }
 
 .nav-items {
@@ -104,7 +116,17 @@ html, body {
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 11; }
+    z-index: 11;
+    font-family: 'ProximaNova';
+    font-size: 5vh;
+    color: #080d37; }
+  #mobile-nav-list {
+    margin: 20vh 0 0 15vw; }
+  .mobile-nav-items {
+    opacity: 0;
+    margin-bottom: 5vh;
+    margin-left: -10vw;
+    transition: margin-left 0.15s cubic-bezier(0, 0, 0.44, 1.58), opacity 0.1s cubic-bezier(0, 0, 0.44, 1.58); }
   .nav-open {
     display: block !important; }
   .nav-close {
@@ -122,29 +144,115 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   height: 100vh;
   width: 100vw;
   background: url("./resources/about-bg.svg");
   background-repeat: no-repeat;
   background-size: cover; }
 
+#about-container {
+  position: absolute;
+  width: 80vw;
+  height: 100vh;
+  right: 0;
+  overflow: auto; }
+
+#about-title {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5.5vh;
+  font-weight: 600;
+  padding: 2vh 0; }
+
+#about-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh; }
+
+.about-list-items {
+  border: solid 1px;
+  width: 80%;
+  font-family: 'AvenirLight', sans-serif;
+  font-size: 3vh;
+  padding: 3vh;
+  box-sizing: border-box;
+  margin-bottom: 4vh;
+  border-radius: 1vh;
+  box-shadow: 0 0 20px #aaaaaa;
+  background: #ffffff; }
+
 @media all and (max-width: 600px) {
   #aboutpage {
     background: url("./resources/about-mobile-bg.svg");
     background-repeat: no-repeat;
-    background-size: cover; } }
+    background-size: cover; }
+  #about-container {
+    width: 100vw; } }
 
 #productpage {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   height: 100vh;
   width: 100vw;
   background: url("./resources/product-bg.svg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#products-title {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5.5vh;
+  font-weight: 600;
+  padding: 2vh 0; }
+
+#products-wrapper {
+  width: 100vw;
+  height: 88vh;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center; }
+
+#products {
+  width: 80vw;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 340px));
+  grid-gap: 20px 30px; }
+
+.product {
+  border: solid 1px black;
+  height: 460px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 10px #aaaaaa;
+  display: flex;
+  flex-direction: column; }
+
+.product-img {
+  margin: 3% 4%;
+  height: 75%;
+  width: 92%;
+  border: solid black 1px; }
+
+.product-info {
+  margin: 2% 4%;
+  height: 16%;
+  width: 92%;
+  font-family: 'Source Sans Pro'; }
+
+.product-title {
+  font-weight: bold;
+  font-size: 170%; }
+
+.product-subtitle {
+  font-size: 130%; }
 
 @media all and (max-width: 600px) {
   #productpage {
@@ -156,15 +264,140 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   height: 100vh;
   width: 100vw;
   background: url("./resources/contact-bg.svg");
   background-repeat: no-repeat;
   background-size: cover; }
 
+#contact-title {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5.5vh;
+  font-weight: 600;
+  padding: 2vh 0; }
+
+#contact-wrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.contact {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaaaaa;
+  border: solid 1px; }
+
+#contact-owner {
+  height: 25vh;
+  width: 45%;
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: space-between; }
+
+#contact-owner-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.5vh;
+  margin: 3vh 0 0 3vh;
+  color: #e9290f; }
+
+#contact-owner-content {
+  text-align: right;
+  font-family: 'AvenirLight';
+  font-size: 4vh;
+  margin: 5vh 8vh 0 0; }
+  #contact-owner-content img {
+    width: 3.5vh; }
+
+.contact-sub-wrap {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4vh; }
+
+#contact-others {
+  height: 18vh;
+  width: 40%;
+  display: flex;
+  justify-content: space-around; }
+  #contact-others div {
+    font-family: 'AvenirLight';
+    font-size: 4vh;
+    margin: 5vh 0 0 0; }
+    #contact-others div img {
+      width: 3.5vh; }
+
+#contact-email {
+  height: 18vh;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+#contact-email-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5vh;
+  color: #e9290f;
+  text-align: center; }
+
+#contact-email-content {
+  font-family: 'AvenirLight';
+  font-size: 3vh; }
+  #contact-email-content img {
+    width: 3.5vh; }
+
+#contact-office {
+  height: 18vh;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+#contact-office-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5vh;
+  color: #e9290f;
+  text-align: center; }
+
+#contact-office-content {
+  font-family: 'AvenirLight';
+  font-size: 3vh; }
+  #contact-office-content img {
+    width: 2.5vh; }
+
+#contact-address {
+  height: 33vh;
+  width: 55%;
+  display: flex;
+  justify-content: space-between; }
+
+#contact-address-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4vh;
+  margin: 2.5vh 0 0 2.5vh;
+  color: #e9290f; }
+
+#contact-address-content {
+  text-align: right;
+  margin: 4vh 2.5vh 0 0;
+  font-size: 4vh;
+  font-family: 'AvenirLight'; }
+
 @media all and (max-width: 600px) {
   #contactpage {
     background: url("./resources/contact-bg.svg");
     background-repeat: no-repeat;
-    background-size: cover; } }
+    background-size: cover; }
+  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address {
+    width: 90%;
+    margin-bottom: 4vh; }
+  .contact-sub-wrap {
+    flex-direction: column;
+    align-items: center; } }
