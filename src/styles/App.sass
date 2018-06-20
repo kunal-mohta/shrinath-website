@@ -12,6 +12,22 @@ html, body
 ::-webkit-scrollbar 
   visibility: hidden
 
+
+#back-icon
+  position: absolute
+  background: url('./resources/back.svg')
+  background-size: cover
+  height: 40px
+  width: 40px
+  top: 2vh
+  left: 4vw
+  transition: transform 0.05s linear
+  z-index: 30
+
+#back-icon:hover
+  transform: scale(1.1)
+  cursor: pointer
+
 @import home-desktop
 @import home-mobile
 

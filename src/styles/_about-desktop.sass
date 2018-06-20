@@ -8,13 +8,15 @@
   background: url('./resources/about-bg.svg')
   background-repeat: no-repeat
   background-size: cover
+  opacity: 0
+  transition: opacity 0.2s linear
+  display: none 
 
 #about-container
   position: absolute
   width: 80vw
   height: 100vh
   right: 0
-  overflow: auto
 
 #about-title
   text-align: center
@@ -27,7 +29,9 @@
   display: flex
   flex-direction: column
   align-items: center
+  height: 83vh
   margin-top: 2vh
+  overflow-y: scroll
 
 .about-list-items
   border: solid 1px

@@ -3,11 +3,19 @@ import whatsappIcon from '../resources/whatsapp-icon.png';
 import phoneIcon from '../resources/phone-icon.png';
 import gmailIcon from '../resources/gmail-icon.png';
 import { ownerDetails, others, officeDetails } from '../constants.js';
+import { connect } from 'react-redux';
 
-export default class ContactPage extends React.Component {
+class ContactPage extends React.Component {
+  navigateHome = () => {
+    this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: 0 });
+    this.props.dispatch({ type: 'TOGGLE_NAV'});
+  }
+
   render () {
     return (
       <div id = 'contactpage'>
+        <div id = 'back-icon' title = 'Go Home' onClick = { this.navigateHome }></div>
+
         <div id = 'contact-title'>Contact Us</div>
         <div id = 'contact-container'>
           <div id = 'contact-wrapper'>
@@ -76,3 +84,12 @@ export default class ContactPage extends React.Component {
     )
   }
 }
+
+function mapPropsToState (state) {
+  return {
+    activePageIndex: state.activePageIndex,
+    prevPageIndex: state.prevPageIndex
+  }
+}
+
+export default connect(mapPropsToState)(ContactPage);

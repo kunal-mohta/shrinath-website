@@ -33,6 +33,15 @@ class Navbar extends React.Component {
     }
   }
 
+  navigateTo (index) {
+    this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: index + 1 });
+  }
+
+  mobileNavigateTo (index) {
+    this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: index + 1});
+    this.props.dispatch({ type: 'TOGGLE_NAVE' });
+  }
+
   render () {
 
     let navClass, menuButton;
@@ -50,7 +59,7 @@ class Navbar extends React.Component {
         <div id = 'desktop-nav'>
           {
             navItems.map(
-              (item, index) => <div className = 'nav-items' key = {index}>{ item.title }</div>
+              (item, index) => <div className = 'nav-items' key = {index} onClick = { this.navigateTo.bind(this, index) }>{ item.title }</div>
             )
           }
         </div>
@@ -60,7 +69,7 @@ class Navbar extends React.Component {
           <div id = 'mobile-nav-list'>
             {
               navItems.map(
-                (item, index) => <div className = 'mobile-nav-items' key = {index}>{ item.title }</div>
+                (item, index) => <div className = 'mobile-nav-items' key = {index} onClick = { this.mobileNavigateTo.bind(this, index) }>{ item.title }</div>
               )
             }
           </div>

@@ -18,6 +18,21 @@ html, body {
 ::-webkit-scrollbar {
   visibility: hidden; }
 
+#back-icon {
+  position: absolute;
+  background: url("./resources/back.svg");
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  top: 2vh;
+  left: 4vw;
+  transition: transform 0.05s linear;
+  z-index: 30; }
+
+#back-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer; }
+
 #homepage {
   position: absolute;
   top: 0;
@@ -27,7 +42,8 @@ html, body {
   width: 100vw;
   background: url("./resources/home-bg.svg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  transition: opacity 0.2s linear; }
 
 #mobile-nav {
   display: none; }
@@ -149,14 +165,16 @@ html, body {
   width: 100vw;
   background: url("./resources/about-bg.svg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  display: none; }
 
 #about-container {
   position: absolute;
   width: 80vw;
   height: 100vh;
-  right: 0;
-  overflow: auto; }
+  right: 0; }
 
 #about-title {
   text-align: center;
@@ -169,7 +187,9 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2vh; }
+  height: 83vh;
+  margin-top: 2vh;
+  overflow-y: scroll; }
 
 .about-list-items {
   border: solid 1px;
@@ -203,7 +223,10 @@ html, body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  display: none; }
 
 #products-title {
   text-align: center;
@@ -269,7 +292,10 @@ html, body {
   width: 100vw;
   background: url("./resources/contact-bg.svg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  display: none; }
 
 #contact-title {
   text-align: center;
