@@ -278,11 +278,15 @@ html, body {
   font-weight: 600;
   padding: 2vh 0; }
 
-#contact-wrapper {
+#contact-container {
   overflow-y: scroll;
   overflow-x: hidden;
+  height: 88vh;
   width: 100vw;
-  padding-top: 2vh;
+  padding-top: 2vh; }
+
+#contact-wrapper {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -309,10 +313,12 @@ html, body {
 #contact-owner-content {
   text-align: right;
   font-family: 'AvenirLight';
-  font-size: 4vh;
+  font-size: 2.2vw;
   margin: 5vh 8vh 0 0; }
   #contact-owner-content img {
     width: 3.5vh; }
+  #contact-owner-content span:first-child {
+    font-size: 2.4vw; }
 
 .contact-sub-wrap {
   width: 100vw;
@@ -322,19 +328,19 @@ html, body {
 
 #contact-others {
   height: 18vh;
-  width: 40%;
+  width: 38%;
   display: flex;
   justify-content: space-around; }
   #contact-others div {
     font-family: 'AvenirLight';
-    font-size: 4vh;
+    font-size: 2vw;
     margin: 5vh 0 0 0; }
     #contact-others div img {
       width: 3.5vh; }
 
 #contact-email {
   height: 18vh;
-  width: 24%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,13 +354,13 @@ html, body {
 
 #contact-email-content {
   font-family: 'AvenirLight';
-  font-size: 3vh; }
+  font-size: 2vw; }
   #contact-email-content img {
     width: 3.5vh; }
 
 #contact-office {
   height: 18vh;
-  width: 24%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,7 +374,7 @@ html, body {
 
 #contact-office-content {
   font-family: 'AvenirLight';
-  font-size: 3vh; }
+  font-size: 2vw; }
   #contact-office-content img {
     width: 2.5vh; }
 
@@ -387,17 +393,59 @@ html, body {
 #contact-address-content {
   text-align: right;
   margin: 4vh 2.5vh 0 0;
-  font-size: 4vh;
+  font-size: 2.4vw;
   font-family: 'AvenirLight'; }
+
+@media all and (max-width: 1000px) {
+  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address {
+    width: 90%;
+    margin-bottom: 3vh; }
+  .contact-sub-wrap {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0; }
+  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content {
+    font-size: 4vh; }
+  #contact-owner-content span:first-child {
+    font-size: 4.4vh; } }
 
 @media all and (max-width: 600px) {
   #contactpage {
     background: url("./resources/contact-bg.svg");
     background-repeat: no-repeat;
     background-size: cover; }
-  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address {
-    width: 90%;
-    margin-bottom: 4vh; }
+  #contact-owner {
+    height: 20vh; }
+  #contact-owner-tag {
+    font-size: 7vw;
+    margin: 2vh 0 0 2vh; }
+  #contact-owner-content {
+    font-size: 5vw;
+    margin: 2.5vh 2vh 0 0; }
+    #contact-owner-content span:first-child {
+      font-size: 6vw; }
   .contact-sub-wrap {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center;
+    margin-bottom: 0; }
+  #contact-others {
+    height: 15vh; }
+    #contact-others div {
+      font-size: 5.5vw;
+      margin: 2vh 0 0 0; }
+  #contact-email {
+    height: 15vh; }
+  #contact-email-tag {
+    font-size: 6vw; }
+  #contact-email-content {
+    font-size: 5vw; }
+  #contact-office-tag {
+    font-size: 6vw; }
+  #contact-office-content {
+    font-size: 5vw; }
+  #contact-address {
+    height: 40vh; }
+  #contact-address-tag {
+    font-size: 6vw; }
+  #contact-address-content {
+    font-size: 6vw; } }

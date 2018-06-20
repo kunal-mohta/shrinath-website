@@ -16,11 +16,15 @@
   font-weight: 600
   padding: 2vh 0
 
-#contact-wrapper
+#contact-container
   overflow-y: scroll
   overflow-x: hidden
+  height: 88vh
   width: 100vw
   padding-top: 2vh
+
+#contact-wrapper
+  width: 100vw
   display: flex
   flex-direction: column
   align-items: center
@@ -47,11 +51,14 @@
 #contact-owner-content
   text-align: right
   font-family: 'AvenirLight'
-  font-size: 4vh
+  font-size: 2.2vw
   margin: 5vh 8vh 0 0
 
   img
     width: 3.5vh
+
+  span:first-child
+    font-size: 2.4vw
 
 .contact-sub-wrap
   width: 100vw
@@ -61,13 +68,13 @@
 
 #contact-others
   height: 18vh
-  width: 40%
+  width: 38%
   display: flex
   justify-content: space-around
 
   div
     font-family: 'AvenirLight'
-    font-size: 4vh
+    font-size: 2vw
     margin: 5vh 0 0 0
 
     img
@@ -76,7 +83,7 @@
 
 #contact-email
   height: 18vh
-  width: 24%
+  width: 30%
   display: flex
   flex-direction: column
   align-items: center
@@ -90,14 +97,14 @@
 
 #contact-email-content
   font-family: 'AvenirLight'
-  font-size: 3vh
+  font-size: 2vw
 
   img
     width: 3.5vh
 
 #contact-office
   height: 18vh
-  width: 24%
+  width: 20%
   display: flex
   flex-direction: column
   align-items: center
@@ -111,7 +118,7 @@
 
 #contact-office-content
   font-family: 'AvenirLight'
-  font-size: 3vh
+  font-size: 2vw
 
   img
     width: 2.5vh  
@@ -131,5 +138,23 @@
 #contact-address-content
   text-align: right
   margin: 4vh 2.5vh 0 0
-  font-size: 4vh
+  font-size: 2.4vw
   font-family: 'AvenirLight'
+
+
+@media all and (max-width: 1000px)
+  
+  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address
+    width: 90%
+    margin-bottom: 3vh
+
+  .contact-sub-wrap
+    flex-direction: column
+    align-items: center
+    margin-bottom: 0
+
+  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content
+    font-size: 4vh
+
+  #contact-owner-content span:first-child
+    font-size: 4.4vh
