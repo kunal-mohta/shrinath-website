@@ -9,6 +9,29 @@ class ContactPage extends React.Component {
   navigateHome = () => {
     this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: 0 });
     this.props.dispatch({ type: 'TOGGLE_NAV'});
+
+    let contactItems = document.getElementsByClassName('contact');
+    let i;
+    for (i = 0; i < contactItems.length; i++) {
+      contactItems[i].style.opacity = 0;
+    }
+  }
+
+  triggerPage = () => {
+    setTimeout(function () {
+      let contactItems = document.getElementsByClassName('contact');
+      let i, j;
+      for (i = 0, j = 0.1; i < contactItems.length; i++, j += 0.1) {
+        contactItems[i].style.transition = 'opacity 0.3s ' + j + 's linear';
+        contactItems[i].style.opacity = 1;
+      }
+    }, 500);
+  }
+
+  componentDidUpdate = () => {
+    if (this.props.activePageIndex === 3) {
+      this.triggerPage();
+    }
   }
 
   render () {

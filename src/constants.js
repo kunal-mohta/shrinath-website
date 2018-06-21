@@ -43,40 +43,22 @@ export const aboutItems = [
   }
 ]
 
-const dir = './resources/products';
-
 export let productItems = [
   {
-    title: '',
-    subtitle: ''
+    title: 'Super Rayon 14 Kg.',
+    subtitle: 'D. No. 8'
   },
   {
     title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 24'
-  },
-  {
-    title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 18'
-  },
-  {
-    title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 3'
-  },
-  {
-    title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 20'
-  },
-  {
-    title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 22'
-  },
-  {
-    title: 'Super Rayon',
-    subtitle: ''
+    subtitle: 'D. No. 26'
   },
   {
     title: 'Deluxe Rayon 14 Kg.',
     subtitle: 'D. No. 23'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 20'
   },
   {
     title: 'Super Rayon',
@@ -84,15 +66,11 @@ export let productItems = [
   },
   {
     title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 24'
+    subtitle: 'D. No. 22'
   },
   {
     title: 'Deluxe Rayon 14 Kg.',
     subtitle: 'D. No. 24'
-  },
-  {
-    title: 'Deluxe Rayon 14 Kg.',
-    subtitle: 'D. No. 26'
   },
   {
     title: 'Deluxe Rayon 14 Kg.',
@@ -103,116 +81,152 @@ export let productItems = [
     subtitle: 'D. No. 27'
   },
   {
-    title: '',
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 3'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 24'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 18'
+  },
+  {
+    title: 'Orgenza Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Metro Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Silk Satin',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Pattu Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Sona Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Pure Cotton Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Yogi Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Ninja Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Bahubali Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Jio Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Silver Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Simran Jorget',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Super Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Royal Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Special Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Komal Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Colour Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Surbhi Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Butter Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Butter Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Sentro Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Golden Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Pattu Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Mango Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Crazy Silk',
     subtitle: ''
   },
   {
-    title: '',
+    title: 'Crazy Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Titan Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Nyca Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Kashmiri Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Cottan Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Cottan Silk',
+    subtitle: ''
+  },
+  {
+    title: 'Cherry SRTTIN-58\"',
     subtitle: ''
   }
 ];
 
-const productCount = 40;
+export const productCount = 44;
 let i;
 for (i = 0; i < productCount; i++) {
   // productItems[i] = {};
-  productItems[i].img = require(`./resources/products/product${ i + 1}`);
+  productItems[i].img = require(`./resources/products/p${ i + 1 }.jpeg`);
 }
 
 export const ownerDetails = {

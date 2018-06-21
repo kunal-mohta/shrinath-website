@@ -201,7 +201,9 @@ html, body {
   margin-bottom: 4vh;
   border-radius: 1vh;
   box-shadow: 0 0 20px #aaaaaa;
-  background: #ffffff; }
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 0.5s linear; }
 
 @media all and (max-width: 600px) {
   #aboutpage {
@@ -257,12 +259,32 @@ html, body {
   box-shadow: 0 0 10px #aaaaaa;
   display: flex;
   flex-direction: column; }
-
-.product-img {
-  margin: 3% 4%;
-  height: 75%;
-  width: 92%;
-  border: solid black 1px; }
+  .product .product-img-wrap {
+    margin: 3% 4%;
+    height: 75%;
+    width: 92%;
+    border: solid black 1px; }
+    .product .product-img-wrap .product-img, .product .product-img-wrap .product-img-hover {
+      height: 100%;
+      width: 100%; }
+    .product .product-img-wrap .product-img-hover {
+      background: rgba(0, 0, 0, 0.5);
+      position: relative;
+      top: -100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; }
+      .product .product-img-wrap .product-img-hover a {
+        display: flex;
+        justify-content: center; }
+        .product .product-img-wrap .product-img-hover a img {
+          width: 20%;
+          opacity: 0.5; }
+        .product .product-img-wrap .product-img-hover a img:hover {
+          opacity: 1; }
+  .product .product-img-wrap:hover .product-img-hover {
+    opacity: 1; }
 
 .product-info {
   margin: 2% 4%;
@@ -321,7 +343,9 @@ html, body {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px #aaaaaa;
-  border: solid 1px; }
+  border: solid 1px;
+  opacity: 0;
+  transition: opacity 0.3s linear; }
 
 #contact-owner {
   height: 25vh;

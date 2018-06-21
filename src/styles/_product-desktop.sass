@@ -45,11 +45,39 @@
   display: flex
   flex-direction: column
 
-.product-img
-  margin: 3% 4%
-  height: 75%
-  width: 92%
-  border: solid black 1px
+  .product-img-wrap
+    margin: 3% 4%
+    height: 75%
+    width: 92%
+    border: solid black 1px
+
+    .product-img, .product-img-hover
+      height: 100%
+      width: 100%
+
+    .product-img-hover
+      background: rgba(0,0,0,0.5)
+      position: relative
+      top: -100%
+      display: flex
+      justify-content: center
+      align-items: center
+      opacity: 0
+
+      a
+        display: flex
+        justify-content: center
+        
+        img
+          width: 20%
+          opacity: 0.5
+
+        img:hover
+          opacity: 1
+
+  .product-img-wrap:hover
+    .product-img-hover
+      opacity: 1
 
 .product-info
   margin: 2% 4%

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -10,7 +10,7 @@ import ProductPage from './components/ProductPage';
 import ContactPage from './components/ContactPage';
 import { pageTransitionDuration } from './constants';
 
-import reducer from './reducer.js';
+// import reducer from './reducer.js';
 
 class App extends Component {
   componentDidUpdate () {

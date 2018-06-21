@@ -7,6 +7,29 @@ class AboutPage extends React.Component {
   navigateHome = () => {
     this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: 0 });
     this.props.dispatch({ type: 'TOGGLE_NAV'});
+
+    let aboutListItems = document.getElementsByClassName('about-list-items');
+    let i;
+    for (i = 0; i < aboutItems.length; i++) {
+      aboutListItems[i].style.opacity = 0;
+    }
+  }
+
+  triggerPage = () => {
+    setTimeout(function () {
+      let aboutListItems = document.getElementsByClassName('about-list-items');
+      let i, j;
+      for (i = 0, j = 0.1; i < aboutListItems.length; i++, j += 0.1) {
+        aboutListItems[i].style.transition = 'opacity 0.3s ' + j + 's linear';
+        aboutListItems[i].style.opacity = 1;
+      }
+    }, 500);
+  }
+
+  componentDidUpdate = () => {
+    if (this.props.activePageIndex === 1) {
+      this.triggerPage();
+    }
   }
 
   render () {
