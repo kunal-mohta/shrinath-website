@@ -4,11 +4,45 @@ import { productItems, productCount } from '../constants.js';
 import { connect } from 'react-redux';
 
 import downloadIcon from '../resources/download.svg';
+import reloadIcon from '../resources/reload.svg';
+
+let isLazyLoading = false;
 
 class ProductPage extends React.Component {
+
   navigateHome = () => {
     this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: 0 });
     this.props.dispatch({ type: 'TOGGLE_NAV'});
+  }
+
+  lazyLoading = () => {
+    let lazyImages = Array.from(document.getElementsByClassName('lazy-image'));
+    if (isLazyLoading === false) {
+      isLazyLoading = true;
+
+      setTimeout(() => {
+        lazyImages.forEach((lazyImage) => {
+          if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) {
+            lazyImage.style.background = `url(${ lazyImage.dataset.src })`;
+            lazyImage.style.backgroundSize = 'cover';
+            lazyImage.classList.remove('lazy-image');
+          }
+        });
+
+        isLazyLoading = false;
+      }, 300);
+    }
+  }
+
+  reloadImage (imgSrc, index) {
+    console.log(imgSrc);
+    document.getElementsByClassName('product-img')[index].style.background = `url(${ imgSrc }) cover`;
+  }
+
+  componentDidUpdate = () => {
+    if (this.props.activePageIndex === 2) {
+      this.lazyLoading();
+    }
   }
 
   componentDidMount () {
@@ -32,22 +66,6 @@ class ProductPage extends React.Component {
           }
         });
       }
-
-      
-      // productsContainer.addEventListener('click', function () {
-      //   let duration = 200;
-      //   scrollAnim({
-      //     duration: duration,
-      //     timing (timeFraction) {
-      //       return timeFraction
-      //     },
-      //     draw (progress) {
-      //       console.log(counter);
-      //       productsContainer.scrollTop = (482 * counter + progress * 482);
-      //     }
-      //   });
-      //   setTimeout(function () { counter++ }, duration + 50);
-      // });
 
       let counter = 0, duration = 200;
       let y1;
@@ -93,6 +111,10 @@ class ProductPage extends React.Component {
           }
       });
     }
+
+    document.getElementById('products-wrapper').addEventListener('scroll', this.lazyLoading);
+    window.addEventListener('resize', this.lazyLoading);
+    window.addEventListener('orientationchange', this.lazyLoading);
   }
 
   render () {
@@ -108,11 +130,14 @@ class ProductPage extends React.Component {
                 (item, index) => (
                   <div className = 'product' key = {index}>
                     <div className = 'product-img-wrap'>
-                      <div className = 'product-img' style = {{ background: `url(${item.img})`, backgroundSize: 'cover' }}></div>
+                      <div className = 'product-img lazy-image' data-src = { item.img }></div>
                       <div className = 'product-img-hover'>
                         <a href = {item.img} download>
                           <img alt = 'Download Image' src = { downloadIcon } title = 'Download Image'/>
                         </a>
+                        <a onClick = {this.reloadImage.bind(this, item.img, index)}>
+                          <img alt = 'Reload Image' src = { reloadIcon } title = 'Reload Image'/>
+                        </a>                        
                       </div>
                     </div>
                     <div className = 'product-info'>

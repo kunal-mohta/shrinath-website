@@ -80,7 +80,7 @@ html, body {
   z-index: 5; }
 
 #company-logo {
-  height: 25vh;
+  height: 40vh;
   padding-top: 5vh; }
 
 #hindi-byline {
@@ -103,7 +103,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover; }
   #company-logo {
-    width: 90vw; }
+    width: 90vw;
+    height: auto; }
   #hindi-byline {
     height: 10vh;
     padding-bottom: 20vh; }
@@ -279,10 +280,13 @@ html, body {
         display: flex;
         justify-content: center; }
         .product .product-img-wrap .product-img-hover a img {
-          width: 20%;
+          width: 40%;
           opacity: 0.5; }
         .product .product-img-wrap .product-img-hover a img:hover {
-          opacity: 1; }
+          opacity: 1;
+          cursor: pointer; }
+      .product .product-img-wrap .product-img-hover a:hover {
+        cursor: default; }
   .product .product-img-wrap:hover .product-img-hover {
     opacity: 1; }
 
