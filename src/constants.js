@@ -34,7 +34,7 @@ export const aboutItems = [
     color: '#00204A'
   },
   {
-    text: 'We are know for our innovative ideas and our capability of meeting customer needs',
+    text: 'We are known for our innovative ideas and our capability of meeting customer needs',
     color: '#FFE600'
   },
   {
