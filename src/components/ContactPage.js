@@ -54,7 +54,7 @@ class ContactPage extends React.Component {
                 <img alt = 'Gmail Icon' src = { gmailIcon } />
               </div>
             </div>
-            
+
             <div className = 'contact-sub-wrap'>
               <div id = 'contact-others' className = 'contact'>
                 <div style = { {textAlign: 'left'} }>
@@ -72,11 +72,19 @@ class ContactPage extends React.Component {
                 </div>
               </div>
 
-              <div id = 'contact-email' className = 'contact'>
-                <div id = 'contact-email-tag'>Office Email</div>
-                <div id = 'contact-email-content'>
-                  <img alt = 'Gmail Icon' src = { gmailIcon } />
-                  &nbsp;{ officeDetails.email }
+              <div id = 'contact-others' className = 'contact'>
+                <div style = { {textAlign: 'left'} }>
+                  <span style = { {fontWeight: 600} }>{ others[2].name }</span>
+                  <br />
+                  <img alt = 'Whatsapp Icon' src = { whatsappIcon } />
+                  &nbsp;{ others[2].number }
+                </div>
+
+                <div style = { {textAlign: 'right'} }>
+                  <span style = { {fontWeight: 600} }>{ others[3].name }</span>
+                  <br />
+                  { others[3].number }&nbsp;
+                  <img alt = 'Whatsapp Icon' src = { whatsappIcon } />
                 </div>
               </div>
 
@@ -91,14 +99,24 @@ class ContactPage extends React.Component {
               </div>
             </div>
 
-            <div id = 'contact-address' className = 'contact'>
-              <div id = 'contact-address-tag'>Where to find us?</div>
-              <div id = 'contact-address-content'>
-                { 
-                  officeDetails.address.split('\n').map(
-                    (item, index) => <span key = { index }>{ item }<br /></span>
-                  )
-                }
+            <div className = 'contact-sub-wrap'>
+              <div id = 'contact-email' className = 'contact'>
+                <div id = 'contact-email-tag'>Office Email</div>
+                <div id = 'contact-email-content'>
+                  <img alt = 'Gmail Icon' src = { gmailIcon } />
+                  &nbsp;{ officeDetails.email }
+                </div>
+              </div>
+
+              <div id = 'contact-address' className = 'contact'>
+                <div id = 'contact-address-tag'>Where to find us?</div>
+                <div id = 'contact-address-content'>
+                  { 
+                    officeDetails.address.split('\n').map(
+                      (item, index) => <span key = { index }>{ item }<br /></span>
+                    )
+                  }
+                </div>
               </div>
             </div>
           </div>

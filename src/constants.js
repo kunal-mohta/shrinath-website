@@ -243,6 +243,14 @@ export const others = [
   {
     name: 'Vishal',
     number: '7600921214'
+  },
+  {
+    name: 'Aashish',
+    number: '9558445914'
+  },
+  {
+    name: 'Manish',
+    number: '9629458931'
   }
 ]
 

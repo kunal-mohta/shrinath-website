@@ -382,7 +382,7 @@ html, body {
 
 #contact-others {
   height: 18vh;
-  width: 38%;
+  width: 35%;
   display: flex;
   justify-content: space-around; }
   #contact-others div {
@@ -391,26 +391,6 @@ html, body {
     margin: 5vh 0 0 0; }
     #contact-others div img {
       width: 3.5vh; }
-
-#contact-email {
-  height: 18vh;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; }
-
-#contact-email-tag {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.5vh;
-  color: #e9290f;
-  text-align: center; }
-
-#contact-email-content {
-  font-family: 'AvenirLight';
-  font-size: 2vw; }
-  #contact-email-content img {
-    width: 3.5vh; }
 
 #contact-office {
   height: 18vh;
@@ -432,9 +412,29 @@ html, body {
   #contact-office-content img {
     width: 2.5vh; }
 
+#contact-email {
+  height: 18vh;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+#contact-email-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5vh;
+  color: #e9290f;
+  text-align: center; }
+
+#contact-email-content {
+  font-family: 'AvenirLight';
+  font-size: 2vw; }
+  #contact-email-content img {
+    width: 3.5vh; }
+
 #contact-address {
   height: 33vh;
-  width: 55%;
+  width: 57%;
   display: flex;
   justify-content: space-between; }
 
