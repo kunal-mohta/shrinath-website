@@ -219,15 +219,57 @@ export let productItems = [
   {
     title: 'Cherry SRTTIN-58\"',
     subtitle: ''
-  }
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 44'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 47'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 48'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 50'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 51'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 36'
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: ''
+  },
+  {
+    title: 'Deluxe Rayon 14 Kg.',
+    subtitle: 'D. No. 35'
+  },
+  {
+    title: 'Premium Rayon 11 Kg.',
+    subtitle: 'D. No. 505'
+  },
+  {
+    title: 'Premium Rayon 11 Kg.',
+    subtitle: 'D. No. 506'
+  },
 ];
 
-export const productCount = 44;
+export const productCount = 54;
 let i;
 for (i = 0; i < productCount; i++) {
   // productItems[i] = {};
   productItems[i].img = require(`./resources/products/p${ i + 1 }.jpeg`);
 }
+
+productItems = productItems.reverse();
 
 export const ownerDetails = {
   name: 'Rajesh Mohta',
