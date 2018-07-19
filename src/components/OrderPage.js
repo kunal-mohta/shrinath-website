@@ -36,7 +36,7 @@ class OrderPage extends React.Component {
 
         <div id = 'order-title' className = 'page-title'>Order</div>
         <div id = 'order-form-wrapper'>
-          <form id = 'order-form' action = 'https://formspree.io/f20170148@pilani.bits-pilani.ac.in' method = 'POST'>
+          <form id = 'order-form' action = 'https://formspree.io/shrinathsilkmills@gmail.com' method = 'POST'>
             <OrderFormField isRequired = {false} label = "Name" />
             <OrderFormField isRequired = {false} label = "GST No." />
             <OrderFormField isRequired = {false} label = "Broker" />
