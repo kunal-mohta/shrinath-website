@@ -29,21 +29,21 @@ class ContactPage extends React.Component {
   }
 
   componentDidUpdate = () => {
-    if (this.props.activePageIndex === 3) {
+    if (this.props.activePageIndex === 4) {
       this.triggerPage();
     }
   }
 
   render () {
     return (
-      <div id = 'contactpage'>
+      <div id = 'contactpage' className = 'page'>
         <div id = 'back-icon' title = 'Go Home' onClick = { this.navigateHome }></div>
 
-        <div id = 'contact-title'>Contact Us</div>
+        <div id = 'contact-title' className = 'page-title'>Contact Us</div>
         <div id = 'contact-container'>
           <div id = 'contact-wrapper'>
             <div id = 'contact-owner' className = 'contact'>
-              <div id = 'contact-owner-tag'>Head</div>
+              <div id = 'contact-owner-tag' class = 'contact-tag'>Head</div>
               <div id = 'contact-owner-content'>
                 <span style = { {fontWeight: 600} }>{ ownerDetails.name }</span>
                 <br />
@@ -89,7 +89,7 @@ class ContactPage extends React.Component {
               </div>
 
               <div id = 'contact-office' className = 'contact'>
-                <div id = 'contact-office-tag'>Office Phone Number</div>
+                <div id = 'contact-office-tag' class = 'contact-tag'>Office Phone Number</div>
                   <div id = 'contact-office-content'>
                     <img alt = 'Phone Icon' src = { phoneIcon } />
                     &nbsp;{ officeDetails.number1 }<br/>
@@ -101,15 +101,22 @@ class ContactPage extends React.Component {
 
             <div className = 'contact-sub-wrap'>
               <div id = 'contact-email' className = 'contact'>
-                <div id = 'contact-email-tag'>Office Email</div>
+                <div id = 'contact-email-tag' class = 'contact-tag'>Office Email</div>
                 <div id = 'contact-email-content'>
                   <img alt = 'Gmail Icon' src = { gmailIcon } />
                   &nbsp;{ officeDetails.email }
                 </div>
               </div>
 
+              <div id = 'contact-gstno' className = 'contact'>
+                <div id = 'contact-gstno-tag' class = 'contact-tag'>GST No.</div>
+                <div id = 'contact-gstno-content'>
+                  { officeDetails.gstno }
+                </div>
+              </div>
+
               <div id = 'contact-address' className = 'contact'>
-                <div id = 'contact-address-tag'>Where to find us?</div>
+                <div id = 'contact-address-tag' class = 'contact-tag'>Where to find us?</div>
                 <div id = 'contact-address-content'>
                   { 
                     officeDetails.address.split('\n').map(

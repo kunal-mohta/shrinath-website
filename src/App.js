@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProductPage from './components/ProductPage';
 import ContactPage from './components/ContactPage';
+import OrderPage from './components/OrderPage';
 import { pageTransitionDuration } from './constants';
 
 // import reducer from './reducer.js';
@@ -21,6 +22,7 @@ class App extends Component {
       document.getElementById('homepage'),
       document.getElementById('aboutpage'),
       document.getElementById('productpage'),
+      document.getElementById('orderpage'),
       document.getElementById('contactpage')
     ]
 
@@ -42,6 +44,7 @@ class App extends Component {
           <HomePage />
           <AboutPage />
           <ProductPage />
+          <OrderPage />
           <ContactPage />
         </div>
     );

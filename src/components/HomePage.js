@@ -13,7 +13,7 @@ class HomePage extends React.Component {
     else mobileNavClass = 'close';
 
     return (
-      <div id = 'homepage'>
+      <div id = 'homepage' className = 'page'>
         <Navbar />
 
         <div id = 'nav-toggle-circle' className = {mobileNavClass}>

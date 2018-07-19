@@ -119,10 +119,10 @@ class ProductPage extends React.Component {
 
   render () {
     return (
-      <div id = 'productpage'>
+      <div id = 'productpage' className = 'page'>
         <div id = 'back-icon' title = 'Go Home' onClick = { this.navigateHome }></div>
 
-        <div id = 'products-title'>Our Product</div>
+        <div id = 'products-title' className = 'page-title'>Our Product</div>
         <div id = 'products-wrapper'>
           <div id = 'products'>
             {

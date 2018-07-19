@@ -33,17 +33,26 @@ html, body {
   transform: scale(1.1);
   cursor: pointer; }
 
-#homepage {
+.page {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   height: 100vh;
   width: 100vw;
-  background: url("./resources/home-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 0.2s linear; }
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  transition: opacity 0.2s linear !important; }
+
+.page-title {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5.5vh;
+  font-weight: 600;
+  padding: 2vh 0; }
+
+#homepage {
+  background: url("./resources/home-bg.svg"); }
 
 #mobile-nav {
   display: none; }
@@ -158,17 +167,8 @@ html, body {
     z-index: 20; } }
 
 #aboutpage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
   background: url("./resources/about-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   opacity: 0;
-  transition: opacity 0.2s linear;
   display: none; }
 
 #about-container {
@@ -176,13 +176,6 @@ html, body {
   width: 80vw;
   height: 100vh;
   right: 0; }
-
-#about-title {
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 5.5vh;
-  font-weight: 600;
-  padding: 2vh 0; }
 
 #about-list {
   display: flex;
@@ -215,28 +208,12 @@ html, body {
     width: 100vw; } }
 
 #productpage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
   background: url("./resources/product-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.2s linear;
   display: none; }
-
-#products-title {
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 5.5vh;
-  font-weight: 600;
-  padding: 2vh 0; }
 
 #products-wrapper {
   width: 100vw;
@@ -309,26 +286,122 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover; } }
 
-#contactpage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  background: url("./resources/contact-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+#orderpage {
+  background: url("./resources/home-bg.svg");
   opacity: 0;
-  transition: opacity 0.2s linear;
   display: none; }
 
-#contact-title {
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 5.5vh;
-  font-weight: 600;
-  padding: 2vh 0; }
+#order-form-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+#order-form {
+  width: 100vw;
+  font-size: 2.3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.order-form-field {
+  width: 80%;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+#order-form div.required::before {
+  content: '*';
+  color: red; }
+
+#order-form input {
+  height: 5vh;
+  width: 80%;
+  font-size: 2.5vh; }
+
+#order-form .srno {
+  width: 12%; }
+
+#order-form .description {
+  width: 80%; }
+
+#order-form .pcs {
+  width: 10%; }
+
+#order-items-wrap {
+  width: 80%;
+  padding: 2vh; }
+
+.order-form-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 0; }
+
+.item-detail-wrap {
+  width: 80%;
+  display: flex;
+  justify-content: space-between; }
+
+#order-add-item {
+  height: 7vh;
+  width: 7vh;
+  border-radius: 100%;
+  display: flex;
+  background: #fff;
+  transition: transform 0.1s linear; }
+
+#order-add-item:hover {
+  transform: scale(1.1) rotate(90deg);
+  cursor: pointer; }
+
+#order-form .order-button {
+  height: 8vh;
+  width: 15%;
+  margin: 2vh 0;
+  padding: 2vh;
+  transition: transform 0.1s linear; }
+
+#order-form .order-button:hover {
+  cursor: pointer;
+  transform: scale(1.1); }
+
+@media all and (max-width: 600px) {
+  #orderpage {
+    background: url("./resources/home-mobile-bg.svg"); }
+  .order-form-field .label {
+    display: none; }
+  .order-form-field input {
+    width: 100% !important; }
+  .order-form-field, #order-items-wrap {
+    width: 90%; }
+  #order-add-item:hover {
+    transform: scale(1); }
+  #order-form .order-button {
+    width: 35%;
+    -webkit-appearance: none;
+    background: white; }
+  .order-form-item .srno {
+    width: 10vw; }
+  .order-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .item-detail-wrap {
+    width: 100%; }
+  #order-form .description {
+    width: 75%; }
+  #order-form .pcs {
+    width: 10%; } }
+
+#contactpage {
+  background: url("./resources/contact-bg.svg");
+  opacity: 0;
+  display: none; }
 
 #contact-container {
   overflow-y: scroll;
@@ -351,6 +424,12 @@ html, body {
   opacity: 0;
   transition: opacity 0.3s linear; }
 
+.contact-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5vh;
+  color: #e9290f;
+  text-align: center; }
+
 #contact-owner {
   height: 25vh;
   width: 45%;
@@ -359,10 +438,8 @@ html, body {
   justify-content: space-between; }
 
 #contact-owner-tag {
-  font-family: 'Roboto', sans-serif;
   font-size: 4.5vh;
-  margin: 3vh 0 0 3vh;
-  color: #e9290f; }
+  margin: 3vh 0 0 3vh; }
 
 #contact-owner-content {
   text-align: right;
@@ -400,12 +477,6 @@ html, body {
   align-items: center;
   justify-content: space-around; }
 
-#contact-office-tag {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.5vh;
-  color: #e9290f;
-  text-align: center; }
-
 #contact-office-content {
   font-family: 'AvenirLight';
   font-size: 2vw; }
@@ -414,51 +485,55 @@ html, body {
 
 #contact-email {
   height: 18vh;
-  width: 35%;
+  width: 28%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around; }
 
-#contact-email-tag {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.5vh;
-  color: #e9290f;
-  text-align: center; }
-
 #contact-email-content {
   font-family: 'AvenirLight';
-  font-size: 2vw; }
+  font-size: 1.8vw; }
   #contact-email-content img {
     width: 3.5vh; }
 
+#contact-gstno {
+  height: 18vh;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+#contact-gstno-content {
+  font-family: 'AvenirLight';
+  font-size: 1.8vw; }
+
 #contact-address {
   height: 33vh;
-  width: 57%;
+  width: 48%;
   display: flex;
   justify-content: space-between; }
 
 #contact-address-tag {
-  font-family: 'Roboto', sans-serif;
   font-size: 4vh;
-  margin: 2.5vh 0 0 2.5vh;
-  color: #e9290f; }
+  margin: 2.5vh 0 0 2.5vh; }
 
 #contact-address-content {
   text-align: right;
   margin: 4vh 2.5vh 0 0;
-  font-size: 2.4vw;
+  font-size: 2.2vw;
   font-family: 'AvenirLight'; }
 
 @media all and (max-width: 1000px) {
-  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address {
+  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address, #contact-gstno {
     width: 90%;
     margin-bottom: 3vh; }
   .contact-sub-wrap {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0; }
-  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content {
+  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content, #contact-gstno-content {
     font-size: 4vh; }
   #contact-owner-content span:first-child {
     font-size: 4.4vh; } }

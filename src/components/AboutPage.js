@@ -34,10 +34,10 @@ class AboutPage extends React.Component {
 
   render () {
     return (
-      <div id = 'aboutpage'>
+      <div id = 'aboutpage' className = 'page'>
         <div id = 'back-icon' title = 'Go Home' onClick = { this.navigateHome }></div>
         <div id = 'about-container'>
-          <div id = 'about-title'>About Us</div>
+          <div id = 'about-title' className = 'page-title'>About Us</div>
 
           <div id = 'about-list'>
             {

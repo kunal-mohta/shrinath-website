@@ -15,6 +15,10 @@ export const navItems = [
     link: '/#product'
   },
   {
+    title: 'Order',
+    link: '/#order'
+  },
+  {
     title: 'Contact Us',
     link: '/#contact'
   }
@@ -300,6 +304,7 @@ export const officeDetails = {
   email: 'shrinathsilkmills@gmail.com',
   number1: '0261-2310760',
   number2: '0261-6500760',
+  gstno: '24AADHM0382C1ZQ',
   address: '15008, Wing-108,\nUpper Ground,\nRadha Krishna Textile Market,\nRing Road,\nSurat (Gujarat)'
 }
 

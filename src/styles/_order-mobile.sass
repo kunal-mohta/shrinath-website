@@ -1,0 +1,40 @@
+@media all and (max-width: 600px)
+  #orderpage
+    background: url('./resources/home-mobile-bg.svg')
+
+  .order-form-field
+    .label
+      display: none
+
+    input
+      width: 100% !important
+
+  $form-width: 90%
+
+  .order-form-field, #order-items-wrap
+    width: $form-width
+
+  #order-add-item:hover
+    transform: scale(1)
+
+  #order-form .order-button
+    width: 35%
+    -webkit-appearance: none
+    background: white
+
+  .order-form-item .srno
+    width: 10vw
+
+  .order-form-item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .item-detail-wrap
+    width: 100%
+
+  #order-form .description
+    width: 75%
+
+  #order-form .pcs
+    width: 10%

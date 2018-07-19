@@ -1,23 +1,7 @@
 #contactpage
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 1
-  height: 100vh
-  width: 100vw
   background: url('./resources/contact-bg.svg')
-  background-repeat: no-repeat
-  background-size: cover
   opacity: 0
-  transition: opacity 0.2s linear
   display: none
-
-#contact-title
-  text-align: center
-  font-family: 'Source Sans Pro', sans-serif
-  font-size: 5.5vh
-  font-weight: 600
-  padding: 2vh 0
 
 #contact-container
   overflow-y: scroll
@@ -40,6 +24,12 @@
   opacity: 0
   transition: opacity 0.3s linear
 
+.contact-tag
+  font-family: 'Roboto', sans-serif
+  font-size: 3.5vh
+  color: #e9290f
+  text-align: center
+
 #contact-owner
   height: 25vh
   width: 45%
@@ -48,10 +38,8 @@
   justify-content: space-between
 
 #contact-owner-tag
-  font-family: 'Roboto', sans-serif
   font-size: 4.5vh
   margin: 3vh 0 0 3vh
-  color: #e9290f
 
 #contact-owner-content
   text-align: right
@@ -93,12 +81,6 @@
   align-items: center
   justify-content: space-around
 
-#contact-office-tag
-  font-family: 'Roboto', sans-serif
-  font-size: 3.5vh
-  color: #e9290f
-  text-align: center
-
 #contact-office-content
   font-family: 'AvenirLight'
   font-size: 2vw
@@ -108,47 +90,51 @@
 
 #contact-email
   height: 18vh
-  width: 35%
+  width: 28%
   display: flex
   flex-direction: column
   align-items: center
   justify-content: space-around
 
-#contact-email-tag
-  font-family: 'Roboto', sans-serif
-  font-size: 3.5vh
-  color: #e9290f
-  text-align: center
-
 #contact-email-content
   font-family: 'AvenirLight'
-  font-size: 2vw
+  font-size: 1.8vw
 
   img
     width: 3.5vh
 
+#contact-gstno
+  height: 18vh
+  width: 20%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+#contact-gstno-content
+  font-family: 'AvenirLight'
+  font-size: 1.8vw
+
 #contact-address
   height: 33vh
-  width: 57%
+  width: 48%
   display: flex
   justify-content: space-between
 
 #contact-address-tag
-  font-family: 'Roboto', sans-serif
   font-size: 4vh
   margin: 2.5vh 0 0 2.5vh
-  color: #e9290f
 
 #contact-address-content
   text-align: right
   margin: 4vh 2.5vh 0 0
-  font-size: 2.4vw
+  font-size: 2.2vw
   font-family: 'AvenirLight'
 
 
 @media all and (max-width: 1000px)
   
-  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address
+  #contact-owner, #contact-others, #contact-email, #contact-office, #contact-address, #contact-gstno
     width: 90%
     margin-bottom: 3vh
 
@@ -157,7 +143,7 @@
     align-items: center
     margin-bottom: 0
 
-  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content
+  #contact-owner-content, #contact-others div, #contact-email-content, #contact-office-content, #contact-address-content, #contact-gstno-content
     font-size: 4vh
 
   #contact-owner-content span:first-child
