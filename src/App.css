@@ -320,10 +320,11 @@ html, body {
 #order-form input {
   height: 5vh;
   width: 80%;
-  font-size: 2.5vh; }
+  font-size: 2.5vh;
+  padding: 1vh; }
 
 #order-form .srno {
-  width: 12%; }
+  width: 15%; }
 
 #order-form .description {
   width: 80%; }
@@ -354,6 +355,9 @@ html, body {
   display: flex;
   background: #fff;
   transition: transform 0.1s linear; }
+  #order-add-item img {
+    height: inherit;
+    width: inherit; }
 
 #order-add-item:hover {
   transform: scale(1.1) rotate(90deg);
@@ -396,7 +400,7 @@ html, body {
   #order-form .description {
     width: 75%; }
   #order-form .pcs {
-    width: 10%; } }
+    width: 15%; } }
 
 #contactpage {
   background: url("./resources/contact-bg.svg");
