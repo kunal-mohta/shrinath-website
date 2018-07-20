@@ -6,6 +6,10 @@ import hindiByline from '../resources/byline.png';
 import Navbar from './Navbar';
 
 class HomePage extends React.Component {  
+  screenTap = () => {
+    this.props.dispatch({ type: 'TOGGLE_NAV' });
+  }
+
   render () {
 
     let mobileNavClass;
@@ -19,7 +23,7 @@ class HomePage extends React.Component {
         <div id = 'nav-toggle-circle' className = {mobileNavClass}>
         </div>
 
-        <div id = 'logo-wrap'>
+        <div id = 'logo-wrap' onClick = { this.screenTap }>
           <img alt = 'Company Logo' id = 'company-logo' src = {companyLogo} />
           <img alt = 'Byline' id = 'hindi-byline' src = {hindiByline} />
         </div>

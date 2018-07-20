@@ -39,7 +39,6 @@ class Navbar extends React.Component {
 
   mobileNavigateTo (index) {
     this.props.dispatch({ type: 'NAVIGATE_TO', pageIndex: index + 1});
-    this.props.dispatch({ type: 'TOGGLE_NAVE' });
   }
 
   render () {
